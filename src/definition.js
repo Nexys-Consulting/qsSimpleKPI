@@ -111,6 +111,21 @@ let kpis = {
             show : function (data) {
               return data.qDef.useLink;
             }
+          },
+          kpiLinkSelectDim: {
+            ref: "qDef.kpiLinkSelectDim",
+            type : "boolean",
+            component : "switch",
+            translation : "Make slection of current dim value",
+            defaultValue : !1,
+            options : [{
+                value : !0,
+                translation : "properties.on"
+              }, {
+                value : !1,
+                translation : "properties.off"
+              }
+            ]
           }
         }
       },

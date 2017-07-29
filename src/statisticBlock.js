@@ -163,7 +163,7 @@ class StatisticBlock extends Component {
     }
   }
 
-  renderKpis(kpis, rowindex, itemsPerRow){
+  renderKpis(kpis, rowindex, itemsPerRow, dimNo, dimensionIndex,kpiLinkSelectDim){
     const self = this;
     const mainContainerElement = this.props.element;
     const numberFormatter = this.props.options.numberFormatter;
@@ -219,6 +219,7 @@ class StatisticBlock extends Component {
         fontStyles: {},
         kpiLink: item.kpiLink,
         useLink: item.useLink,
+        kpiLinkSelectDim: item.kpiLinkSelectDim,
         textAlignment: item.textAlignment,
         infographic: item.infographic,
         embeddedItem: item.embeddedItem,
@@ -226,7 +227,7 @@ class StatisticBlock extends Component {
         kpisRows: rows,
         isShow
       };
-      params.onClick = self.onKPIClick.bind(self, params);
+      params.onClick = self.onKPIClick.bind(self, params, dimNo, dimensionIndex);
 
 
       let fontStyles = item.fontStyles && item.fontStyles.split(',');
@@ -287,7 +288,8 @@ class StatisticBlock extends Component {
       divideBy,
       backgroundColor,
       verticalAlign = "top-aligned-items",
-      styles = ''
+      styles = '',
+      kpiLinkSelectDim
     } = this.props.options;
 
     let items;
@@ -333,7 +335,8 @@ class StatisticBlock extends Component {
             kpis.qDataPages[0].qMatrix.map(function(dim, dindex){
               const dimensionLabel = dim[dimNo].qText;
               const dimensionIndex = dim[dimNo].qElemNumber;
-              let measures = self.renderKpis(kpis, dindex, divideByNumber);
+              //let measures = self.renderKpis(kpis, dindex, divideByNumber);
+              let measures = self.renderKpis(kpis, dindex, divideByNumber,dimNo, dimensionIndex,kpiLinkSelectDim);
               return (
               <div className={`ui ${dimShowAs}`} style={segmentStyle}>
                 {dimHideLabels ? null : <a className={`ui ${dimLabelSize} ${dimLabelOrientation} ${dimLabelsAlignment} label`} onClick={self.onDimensionLabelClick.bind(self, dimNo, dimensionIndex)}>{dimensionLabel}</a>}
@@ -378,7 +381,7 @@ class StatisticBlock extends Component {
     );
   }
 
-  onKPIClick(kpi) {
+  onKPIClick(kpi, dimNo, value) {
     const services = this.props.services;
     const isAllowOpenSheet = (this.props.services.State
       && !this.props.services.State.isInEditMode());
@@ -389,14 +392,23 @@ class StatisticBlock extends Component {
       else
         linkId = kpi.kpiLink && kpi.kpiLink.id;
 
-      if(linkId)
+      if(linkId) {
+        if(kpi.kpiLinkSelectDim) 
+          this.props.services && this.props.services.QlikComponent
+          && this.props.services.QlikComponent.backendApi.selectValues(dimNo, [value], false);
+
         services.Routing.goToSheet(linkId, 'analysis');
+      }
     }
   }
 
   onDimensionLabelClick(dimNo, value) {
+    //this.props.services && this.props.services.QlikComponent
+    //  && this.props.services.QlikComponent.selectValues(dimNo, [value], true);
+
     this.props.services && this.props.services.QlikComponent
-      && this.props.services.QlikComponent.selectValues(dimNo, [value], true);
+      && this.props.services.QlikComponent.backendApi.selectValues(dimNo, [value], false);
+
   }
 }
 

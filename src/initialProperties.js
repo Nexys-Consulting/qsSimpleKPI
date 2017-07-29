@@ -8,5 +8,6 @@ export default {
       qHeight: 100
     }]
   },
+  selectionMode : "QUICK",
   options: {}
 }

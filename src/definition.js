@@ -70,7 +70,17 @@ let kpis = {
         ref: ATTRIBUTES.itemColor.ref,
         label: "Value color",
         expression: "always",
-        defaultValue: "#808080"
+        defaultValue: "#808080",
+        change: function(obj) {
+          const isExpr = /^=/;
+          const isString = /^'(.+)'$/;
+          const value = obj.qAttributeExpressions[ATTRIBUTES.itemColor.index].qExpression;
+          console.log(value);
+          if(value.hasOwnProperty("qStringExpression")) {
+            obj.qAttributeExpressions[ ATTRIBUTES.itemColor.index].qExpression = value.qStringExpression.qExpr;
+            console.log();
+          }
+        },
       },
       pickItemColor: {
         type: "string",

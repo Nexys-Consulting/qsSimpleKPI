@@ -160,10 +160,23 @@
   @borderShadow
 ;
 
+
+/* Raised */
+@raisedShadow:
+  @borderShadow,
+  @floatingShadow
+;
+@raisedShadowHover:
+  @borderShadow,
+  @floatingShadowHover
+;
+
 /* Card Count */
 @wideCardSpacing: 1em;
 @cardSpacing: 0.75em;
 @smallCardSpacing: 0.5em;
+@smallsmallCardSpacing: 0.25em;
+
 
 @oneCardSpacing: 0em;
 @twoCardSpacing: @wideCardSpacing;
@@ -176,26 +189,44 @@
 @nineCardSpacing: @smallCardSpacing;
 @tenCardSpacing: @smallCardSpacing;
 
+@elevenCardSpacing: @smallsmallCardSpacing;
+@twelveCardSpacing: @smallsmallCardSpacing;
+@thirteenCardSpacing: @smallsmallCardSpacing;
+@fourteenCardSpacing: @smallsmallCardSpacing;
+@fifteenCardSpacing: @smallsmallCardSpacing;
+
 @oneCard: @oneColumn;
 @oneCardOffset: 0em;
-@twoCard: ~"calc("@twoColumn~" - "(@twoCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@twoCard: ~"calc("@twoColumn~" - "(@twoCardSpacing * 2)~")";
 @twoCardOffset: -@twoCardSpacing;
-@threeCard: ~"calc("@threeColumn~" - "(@threeCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@threeCard: ~"calc("@threeColumn~" - "(@threeCardSpacing * 2)~")";
 @threeCardOffset: -@threeCardSpacing;
-@fourCard: ~"calc("@fourColumn~" - "(@fourCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@fourCard: ~"calc("@fourColumn~" - "(@fourCardSpacing * 2)~")";
 @fourCardOffset: -@fourCardSpacing;
-@fiveCard: ~"calc("@fiveColumn~" - "(@fiveCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@fiveCard: ~"calc("@fiveColumn~" - "(@fiveCardSpacing * 2)~")";
 @fiveCardOffset: -@fiveCardSpacing;
-@sixCard: ~"calc("@sixColumn~" - "(@sixCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@sixCard: ~"calc("@sixColumn~" - "(@sixCardSpacing * 2)~")";
 @sixCardOffset: -@sixCardSpacing;
-@sevenCard: ~"calc("@sevenColumn~" - "(@sevenCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@sevenCard: ~"calc("@sevenColumn~" - "(@sevenCardSpacing * 2)~")";
 @sevenCardOffset: -@sevenCardSpacing;
-@eightCard: ~"calc("@eightColumn~" - "(@sevenCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@eightCard: ~"calc("@eightColumn~" - "(@sevenCardSpacing * 2)~")";
 @eightCardOffset: -@sevenCardSpacing;
-@nineCard: ~"calc("@nineColumn~" - "(@nineCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@nineCard: ~"calc("@nineColumn~" - "(@nineCardSpacing * 2)~")";
 @nineCardOffset: -@nineCardSpacing;
-@tenCard: ~"calc("@tenColumn~" - "(@tenCardSpacing * 2)~" - "(@borderWidth * 2)~")";
+@tenCard: ~"calc("@tenColumn~" - "(@tenCardSpacing * 2)~")";
 @tenCardOffset: -@tenCardSpacing;
+
+@elevenCard: ~"calc("@elevenColumn~" - "(@elevenCardSpacing * 2)~")";
+@elevenCardOffset: -@elevenCardSpacing;
+@twelveCard: ~"calc("@twelveColumn~" - "(@twelveCardSpacing * 2)~")";
+@twelveCardOffset: -@twelveCardSpacing;
+@thirteenCard: ~"calc("@thirteenColumn~" - "(@thirteenCardSpacing * 2)~")";
+@thirteenCardOffset: -@thirteenCardSpacing;
+@fourteenCard: ~"calc("@fourteenColumn~" - "(@fourteenCardSpacing * 2)~")";
+@fourteenCardOffset: -@fourteenCardSpacing;
+@fifteenCard: ~"calc("@fifteenColumn~" - "(@fifteenCardSpacing * 2)~")";
+@fifteenCardOffset: -@fifteenCardSpacing;
+
 
 /* Stackable */
 @stackableRowSpacing: 1em;

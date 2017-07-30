@@ -216,6 +216,7 @@
 @tenCard: ~"calc("@tenColumn~" - "(@tenCardSpacing * 2)~")";
 @tenCardOffset: -@tenCardSpacing;
 
+/*
 @elevenCard: ~"calc("@elevenColumn~" - "(@elevenCardSpacing * 2)~")";
 @elevenCardOffset: -@elevenCardSpacing;
 @twelveCard: ~"calc("@twelveColumn~" - "(@twelveCardSpacing * 2)~")";
@@ -226,6 +227,7 @@
 @fourteenCardOffset: -@fourteenCardSpacing;
 @fifteenCard: ~"calc("@fifteenColumn~" - "(@fifteenCardSpacing * 2)~")";
 @fifteenCardOffset: -@fifteenCardSpacing;
+*/
 
 
 /* Stackable */

@@ -170,7 +170,8 @@ function getSizeIndex(value) {
 }
 
 const DIVIDE_BY = [
-  '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'
+  '', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 
+  'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'
 ];
 
 function getDivideByValue(value) {

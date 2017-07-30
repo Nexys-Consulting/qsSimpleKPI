@@ -1,3 +1,104 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+
+.ui.eleven.cards {
+  margin-left: @elevenCardOffset;
+  margin-right: @elevenCardOffset;
+}
+.ui.eleven.cards > .card {
+  width: @elevenCard;
+  margin-left: @elevenCardSpacing;
+  margin-right: @elevenCardSpacing;
+}
+
+.ui.twelve.cards {
+  margin-left: @twelveCardOffset;
+  margin-right: @twelveCardOffset;
+}
+.ui.twelve.cards > .card {
+  width: @twelveCard;
+  margin-left: @twelveCardSpacing;
+  margin-right: @twelveCardSpacing;
+}
+
+.ui.thirteen.cards {
+  margin-left: @thirteenCardOffset;
+  margin-right: @thirteenCardOffset;
+}
+.ui.thirteen.cards > .card {
+  width: @thirteenCard;
+  margin-left: @thirteenCardSpacing;
+  margin-right: @thirteenCardSpacing;
+}
+
+.ui.fourteen.cards {
+  margin-left: @fourteenCardOffset;
+  margin-right: @fourteenCardOffset;
+}
+.ui.fourteen.cards > .card {
+  width: @fourteenCard;
+  margin-left: @fourteenCardSpacing;
+  margin-right: @fourteenCardSpacing;
+}
+
+.ui.fifteen.cards {
+  margin-left: @fifteenCardOffset;
+  margin-right: @fifteenCardOffset;
+}
+.ui.fifteen.cards > .card {
+  width: @fifteenCard;
+  margin-left: @fifteenCardSpacing;
+  margin-right: @fifteenCardSpacing;
+}
+
+.ui.sixteen.cards {
+  margin-left: @sixteenCardOffset;
+  margin-right: @sixteenCardOffset;
+}
+.ui.sixteen.cards > .card {
+  width: @sixteenCard;
+  margin-left: @sixteenCardSpacing;
+  margin-right: @sixteenCardSpacing;
+}
+
+.ui.seventeen.cards {
+  margin-left: @seventeenCardOffset;
+  margin-right: @seventeenCardOffset;
+}
+.ui.seventeen.cards > .card {
+  width: @seventeenCard;
+  margin-left: @seventeenCardSpacing;
+  margin-right: @seventeenCardSpacing;
+}
+
+.ui.eighteen.cards {
+  margin-left: @eighteenCardOffset;
+  margin-right: @eighteenCardOffset;
+}
+.ui.eighteen.cards > .card {
+  width: @eighteenCard;
+  margin-left: @eighteenCardSpacing;
+  margin-right: @eighteenCardSpacing;
+}
+
+.ui.nineteen.cards {
+  margin-left: @nineteenCardOffset;
+  margin-right: @nineteenCardOffset;
+}
+.ui.nineteen.cards > .card {
+  width: @nineteenCard;
+  margin-left: @nineteenCardSpacing;
+  margin-right: @nineteenCardSpacing;
+}
+
+.ui.twenty.cards {
+  margin-left: @twentyCardOffset;
+  margin-right: @twentyCardOffset;
+}
+.ui.twenty.cards > .card {
+  width: @twentyCard;
+  margin-left: @twentyCardSpacing;
+  margin-right: @twentyCardSpacing;
+}

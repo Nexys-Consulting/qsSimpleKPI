@@ -462,7 +462,58 @@ let settings = {
               value: "ten",
               label: "10",
               tooltip: "Ten"
+            },
+            {
+              value: "eleven",
+              label: "11",
+              tooltip: "Eleven"
+            },
+            {
+              value: "twelve",
+              label: "12",
+              tooltip: "Twelve"
+            },
+            {
+              value: "thirteen",
+              label: "13",
+              tooltip: "Thirteen"
+            },
+            {
+              value: "fourteen",
+              label: "14",
+              tooltip: "Fourteen"
+            },
+            {
+              value: "fifteen",
+              label: "15",
+              tooltip: "Fifteen"
+            },
+            {
+              value: "sixteen",
+              label: "16",
+              tooltip: "Sixteen"
+            },
+            {
+              value: "seventeen",
+              label: "17",
+              tooltip: "Seventeen"
+            },
+            {
+              value: "eighteen",
+              label: "18",
+              tooltip: "Eighteen"
+            },
+            {
+              value: "nineteen",
+              label: "19",
+              tooltip: "Nineteen"
+            },
+            {
+              value: "twenty",
+              label: "20",
+              tooltip: "Twenty"
             }
+
           ]
         },
         dimensionsOrientation: {

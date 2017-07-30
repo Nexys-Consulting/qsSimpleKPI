@@ -1,3 +1,20 @@
 /*******************************
      User Global Variables
 *******************************/
+
+/*-------------------
+        Grid
+--------------------*/
+
+@columnCount: 20;
+
+/* Columns */
+@seventeenWide  : (17 / @columnCount * 100%);
+@eighteenWide   : (18 / @columnCount * 100%);
+@nineteenWide   : (19 / @columnCount * 100%);
+@twentyWide     : (20 / @columnCount * 100%);
+
+@seventeenColumn: (1 / 17 * 100%);
+@eighteenColumn : (1 / 18 * 100%);
+@nineteenColumn : (1 / 19 * 100%);
+@twentyColumn   : (1 / 20 * 100%);

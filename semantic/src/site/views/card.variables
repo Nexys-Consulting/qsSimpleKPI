@@ -1,3 +1,39 @@
 /*******************************
     User Variable Overrides
 *******************************/
+
+@smallsmallCardSpacing: 0.25em;
+
+@elevenCardSpacing: @smallsmallCardSpacing;
+@twelveCardSpacing: @smallsmallCardSpacing;
+@thirteenCardSpacing: @smallsmallCardSpacing;
+@fourteenCardSpacing: @smallsmallCardSpacing;
+@fifteenCardSpacing: @smallsmallCardSpacing;
+@sixteenCardSpacing: @smallsmallCardSpacing;
+
+@seventeenCardSpacing: @smallsmallCardSpacing;
+@eighteenCardSpacing: @smallsmallCardSpacing;
+@nineteenCardSpacing: @smallsmallCardSpacing;
+@twentyCardSpacing: @smallsmallCardSpacing;
+
+@elevenCard: ~"calc("@elevenColumn~" - "(@elevenCardSpacing * 2)~")";
+@elevenCardOffset: -@elevenCardSpacing;
+@twelveCard: ~"calc("@twelveColumn~" - "(@twelveCardSpacing * 2)~")";
+@twelveCardOffset: -@twelveCardSpacing;
+@thirteenCard: ~"calc("@thirteenColumn~" - "(@thirteenCardSpacing * 2)~")";
+@thirteenCardOffset: -@thirteenCardSpacing;
+@fourteenCard: ~"calc("@fourteenColumn~" - "(@fourteenCardSpacing * 2)~")";
+@fourteenCardOffset: -@fourteenCardSpacing;
+@fifteenCard: ~"calc("@fifteenColumn~" - "(@fifteenCardSpacing * 2)~")";
+@fifteenCardOffset: -@fifteenCardSpacing;
+@sixteenCard: ~"calc("@sixteenColumn~" - "(@sixteenCardSpacing * 2)~")";
+@sixteenCardOffset: -@sixteenCardSpacing;
+
+@seventeenCard: ~"calc("@seventeenColumn~" - "(@seventeenCardSpacing * 2)~")";
+@seventeenCardOffset: -@seventeenCardSpacing;
+@eighteenCard: ~"calc("@eighteenColumn~" - "(@eighteenCardSpacing * 2)~")";
+@eighteenCardOffset: -@eighteenCardSpacing;
+@nineteenCard: ~"calc("@nineteenColumn~" - "(@nineteenCardSpacing * 2)~")";
+@nineteenCardOffset: -@nineteenCardSpacing;
+@twentyCard: ~"calc("@twentyColumn~" - "(@twentyCardSpacing * 2)~")";
+@twentyCardOffset: -@twentyCardSpacing;

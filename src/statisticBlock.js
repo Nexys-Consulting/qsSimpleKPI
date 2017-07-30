@@ -304,7 +304,7 @@ class StatisticBlock extends Component {
     if(kpis.qMeasureInfo.length > 0 && kpis.qDataPages.length > 0) {
 
       if(divideBy === "auto")
-        divideBy = DIVIDE_BY[ Math.min(10, kpis.qDataPages[0].qMatrix[0].length - kpis.qDimensionInfo.length)];
+        divideBy = DIVIDE_BY[ Math.min(15, kpis.qDataPages[0].qMatrix[0].length - kpis.qDimensionInfo.length)];
 
       let divideByNumber = Math.max(1, DIVIDE_BY.indexOf(divideBy));
 
@@ -312,7 +312,7 @@ class StatisticBlock extends Component {
       if(kpis.qDimensionInfo.length > 0) {
         const dimNo = 0; // only one dimension allowed!
         if(dimDivideBy === "auto")
-          dimDivideBy = DIVIDE_BY[Math.min(10, kpis.qDimensionInfo[dimNo].qCardinal)];
+          dimDivideBy = DIVIDE_BY[Math.min(15, kpis.qDimensionInfo[dimNo].qCardinal)];
 
         let dimShowAsContainer = dimShowAs === 'card' ? `${dimDivideBy} stackable cards`  : 'segments';
         let dimLabelsAlignment = '';

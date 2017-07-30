@@ -53,6 +53,8 @@ export default function setupPaint({
   return function paint($element, layout) {
     let self = this;
 
+    console.log(layout);
+    
     if(!localeInfo) { // && self.backendApi && self.backendApi.localeInfo
       localeInfo = qlik.currApp().model.layout.qLocaleInfo; //self.backendApi && self.backendApi.localeInfo;
     }

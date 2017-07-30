@@ -197,8 +197,15 @@ class StatisticBlock extends Component {
       if(index >= data.length) return;
       const isAttrExps = data[index].qAttrExps && data[index].qAttrExps.qValues.length;
       let overridedLabel;
-      if(isAttrExps)
+      let valueColorexp;
+      if(isAttrExps) {
         overridedLabel = data[index].qAttrExps.qValues[ATTRIBUTES.overridedLabel.index].qText;
+        if (data[index].qAttrExps.qValues.length > 1) {
+          valueColorexp  = data[index].qAttrExps.qValues[ATTRIBUTES.itemColor.index].qText;
+        } else {
+         valueColorexp = "";
+        }
+      }
       let params = {
         label: item.ovParams && overridedLabel ? overridedLabel : item.qFallbackTitle,
         value: "",
@@ -207,7 +214,8 @@ class StatisticBlock extends Component {
         hideLabel: item.hideLabel,
         hideValue: item.hideValue,
         labelColor: item.labelColor,
-        valueColor: item.valueColor,
+        //valueColor: item.valueColor,
+        valueColor: valueColorexp ? valueColorexp : "#808080",
         valueIcon: item.valueIcon,
         iconPosition: item.iconPosition,
         iconOrder: item.iconOrder,

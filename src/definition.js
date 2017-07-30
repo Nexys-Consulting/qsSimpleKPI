@@ -66,6 +66,8 @@ let kpis = {
       itemColor: {
         type: "string",
         ref: "qDef.valueColor",
+        //expression: "optional",
+        ref: ATTRIBUTES.itemColor.ref,
         label: "Value color",
         expression: "always",
         defaultValue: "#808080"
@@ -181,6 +183,17 @@ let kpis = {
         //   }
         // },
       },
+      /*
+      overridedTest: {
+        type: "string",
+        label: "Test",
+        expression: "optional",
+        ref: ATTRIBUTES.overridedTest.ref,
+        //defaultValue: "=Count({1<>}distinct PronosticId)",
+        change: function(obj) {
+          console.log(obj);
+        },
+      },*/      
       size: {
         type: "string",
         component: "dropdown",

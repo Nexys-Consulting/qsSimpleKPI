@@ -139,6 +139,10 @@ export default class StatisticItem extends Component {
         kpisRows,
         isShow
     };
+    
+    //console.log("value: "+value+ ", valueStyles:");
+    //console.log(valueStyles);
+
     let valueComponent = hideValue ? null : (
         <ValueComponent {...valueComponentProps}>
             {iconOrderFirst && this.props.item.iconPosition === 'value' ? <Icon valueIcon={valueIcon} iconSize={iconSize} value={numericValue} infographic={infographic} /> : null}
